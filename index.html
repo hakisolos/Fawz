@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fawzyyiah Animation</title>
+  <style>
+    /* Global styling */
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fecfef); /* Romantic pink gradient */
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    /* Container for the animated name */
+    .name-container {
+      position: relative;
+      font-size: 5rem;
+      color: #ff758f; /* Rose-gold color */
+      text-shadow: 0 0 10px rgba(255, 117, 143, 0.3), 0 0 20px rgba(255, 117, 143, 0.5);
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    /* Letter styling with faster bounce effect */
+    .name-container span {
+      display: inline-block;
+      animation: bounce 0.8s cubic-bezier(0.5, 1.5, 0.5, 1) infinite;
+    }
+
+    /* Bounce effect for letters */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Staggered bounce timing */
+    .name-container span:nth-child(2) { animation-delay: 0.1s; }
+    .name-container span:nth-child(3) { animation-delay: 0.2s; }
+    .name-container span:nth-child(4) { animation-delay: 0.3s; }
+    .name-container span:nth-child(5) { animation-delay: 0.4s; }
+    .name-container span:nth-child(6) { animation-delay: 0.5s; }
+    .name-container span:nth-child(7) { animation-delay: 0.6s; }
+    .name-container span:nth-child(8) { animation-delay: 0.7s; }
+    .name-container span:nth-child(9) { animation-delay: 0.8s; }
+
+    /* Button styling with hover effect */
+    .click-me-button {
+      background-color: #ff758f; /* Rose-gold color */
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 117, 143, 0.5), 0 0 20px rgba(255, 117, 143, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 10px;
+    }
+
+    .click-me-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 117, 143, 0.7), 0 0 30px rgba(255, 117, 143, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <!-- Text container with individual letters for bounce effect -->
+  <div class="name-container" id="name">
+    <span>F</span><span>a</span><span>w</span><span>z</span><span>y</span><span>y</span><span>i</span><span>a</span><span>h</span>
+  </div>
+
+  <!-- Button to go to "I Love You" page -->
+  <button class="click-me-button" onclick="goToLovePage()">Click Me</button>
+
+  <script>
+    function goToLovePage() {
+      window.location.href = "love.html";
+    }
+  </script>
+</body>
+</html>

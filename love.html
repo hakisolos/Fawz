@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You</title>
+  <style>
+    /* Global styling */
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Lavender to pink gradient */
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: #d5006d; /* Dark pink color */
+      text-align: center;
+    }
+
+    /* Bouncing text styling */
+    .love-container {
+      font-size: 5rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .love-container span {
+      display: inline-block;
+      animation: bounce 0.8s cubic-bezier(0.5, 1.5, 0.5, 1) infinite;
+    }
+
+    /* Bounce effect for letters */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Staggered bounce timing */
+    .love-container span:nth-child(2) { animation-delay: 0.1s; }
+    .love-container span:nth-child(3) { animation-delay: 0.2s; }
+    .love-container span:nth-child(4) { animation-delay: 0.3s; }
+    .love-container span:nth-child(5) { animation-delay: 0.4s; }
+    .love-container span:nth-child(6) { animation-delay: 0.5s; }
+
+    /* Button styling */
+    .more-button {
+      background-color: #d5006d; /* Dark pink color */
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(213, 0, 109, 0.5), 0 0 20px rgba(213, 0, 109, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .more-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(213, 0, 109, 0.7), 0 0 30px rgba(213, 0, 109, 0.9);
+    }
+
+    /* Responsive styling */
+    @media (max-width: 600px) {
+      .love-container {
+        font-size: 4rem; /* Reduce font size on small screens */
+      }
+
+      .more-button {
+        font-size: 1rem;
+        padding: 10px 20px; /* Adjust button size */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="love-container">
+    <span>I</span><span>&nbsp;</span><span>L</span><span>o</span><span>v</span><span>e</span><span>&nbsp;</span><span>Y</span><span>o</span><span>u</span>
+  </div>
+  <button class="more-button" onclick="goToMorePage()">Click Me</button>
+
+  <script>
+    function goToMorePage() {
+      window.location.href = "more.html";
+    }
+  </script>
+</body>
+</html>
